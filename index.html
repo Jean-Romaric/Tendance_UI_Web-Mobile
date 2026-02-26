@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tendances UI Web & Mobile</title>
+    <style>
+        /* --- 1. Design Global : Glassmorphism & Dark Mode --- */
+        
+        /* Un fond dégradé animé moderne */
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: #fff;
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+        }
+
+        header {
+            text-align: center;
+            padding: 3rem 1rem;
+        }
+
+        h1 {
+            font-size: 3rem;
+            margin: 0;
+            text-shadow: 0 4px 15px rgba(0,0,0,0.2);
+            letter-spacing: -1px;
+        }
+
+        .subtitle {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            margin-top: 10px;
+        }
+
+        main {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 1rem 3rem 1rem;
+        }
+
+        /* --- 2. Style de l'Accordéon (Effet Verre) --- */
+        
+        details > summary { list-style: none; }
+        details > summary::-webkit-details-marker { display: none; }
+
+        .trend-card {
+            background: rgba(255, 255, 255, 0.1); /* Transparence */
+            backdrop-filter: blur(12px); /* Flou derrière l'élément (Effet Glassmorphism) */
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 20px;
+            margin-bottom: 1.5rem;
+            box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+            overflow: hidden;
+            transition: transform 0.3s ease;
+        }
+
+        /* Petit effet de survol sur la carte */
+        .trend-card:hover {
+            transform: translateY(-5px);
+            border-color: rgba(255, 255, 255, 0.4);
+        }
+
+        /* --- GRAND TITRE --- */
+        summary {
+            font-size: 1.8rem;
+            padding: 1.5rem;
+            cursor: pointer;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            transition: background 0.3s;
+        }
+
+        summary:hover {
+            background: rgba(255, 255, 255, 0.1);
+        }
+
+        /* Icône animée (+) */
+        summary::after {
+            content: '+';
+            font-size: 2rem;
+            opacity: 0.8;
+            transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); /* Rebond */
+        }
+
+        details[open] summary::after {
+            transform: rotate(45deg);
+        }
+
+        details[open] summary {
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        /* --- Animation Déroulement --- */
+        .content-wrapper {
+            display: grid;
+            grid-template-rows: 0fr;
+            transition: grid-template-rows 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        details[open] .content-wrapper {
+            grid-template-rows: 1fr;
+        }
+
+        .content {
+            overflow: hidden;
+        }
+
+        /* --- Contenu Textuel --- */
+        .text-content {
+            padding: 0 2rem 2rem 2rem;
+            font-size: 1.1rem;
+            line-height: 1.6;
+        }
+
+        h2 {
+            color: #a5f3fc; /* Cyan clair */
+            margin-top: 0;
+            font-size: 1.5rem;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        li {
+            margin-bottom: 12px;
+            padding-left: 20px;
+            position: relative;
+        }
+
+        /* Petite puce personnalisée */
+        li::before {
+            content: '•';
+            color: #f472b6; /* Rose */
+            position: absolute;
+            left: 0;
+            font-weight: bold;
+        }
+
+        /* Tags pour les mots-clés */
+        .tag {
+            display: inline-block;
+            background: rgba(0,0,0,0.3);
+            padding: 4px 10px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            margin-right: 5px;
+            font-family: monospace;
+            border: 1px solid rgba(255,255,255,0.2);
+        }
+
+        /* Responsive */
+        @media (max-width: 600px) {
+            h1 { font-size: 2rem; }
+            summary { font-size: 1.4rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>UI Trends 2024</h1>
+        <p class="subtitle">Les tendances du design Web & Mobile</p>
+    </header>
+
+    <main>
+
+        <!-- SLIDE 1: Dark Mode -->
+        <details class="trend-card" open>
+            <summary>1. Le Dark Mode Évolué</summary>
+            <div class="content-wrapper">
+                <div class="content">
+                    <div class="text-content">
+                        <h2> L'obscurité élégante</h2>
+                        <p>Ce n'est plus juste une option, c'est la norme. Mais le dark mode moderne a évolué.</p>
+                        <br>
+                        <ul>
+                            <li><strong>OLED Blacks :</strong> Utilisation de noir pur (#000000) sur les écrans OLED pour économiser la batterie et obtenir un contraste infini.</li>
+                            <li><strong>Contraste Élevé :</strong> On abandonne le gris foncé pour des blancs éclatants sur fond noir très sombre.</li>
+                            <li><strong>Atmosphère :</strong> Crée une sensation de premium et de luxe (comme Netflix ou Spotify).</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </details>
+
+        <!-- SLIDE 2: Glassmorphism -->
+        <details class="trend-card">
+            <summary>2. Glassmorphism</summary>
+            <div class="content-wrapper">
+                <div class="content">
+                    <div class="text-content">
+                        <h2>L'effet Verre</h2>
+                        <p>Inspiré par iOS et Windows 11, ce style utilise la transparence et le flou.</p>
+                        <br>
+                        <p><span class="tag">CSS backdrop-filter</span> <span class="tag">Blur</span> <span class="tag">Couches</span></p>
+                        <ul>
+                            <li><strong>Flou d'arrière-plan :</strong> Le contenu derrière l'élément est flouté, créant une sensation de profondeur et de superposition.</li>
+                            <li><strong>Border Subtile :</strong> Des bordures blanches fines et translucides pour simuler le reflet sur le verre.</li>
+                            <li><strong>Usage :</strong> Parfait pour les menus flottants, les cartes de profil ou les modales.</li>
+                        </ul>
+                        <div style="background: rgba(255,255,255,0.1); padding: 10px; border-radius: 10px; margin-top: 10px; border: 1px solid rgba(255,255,255,0.2);">
+                            <em>(Note : Le design de cette présentation utilise justement le Glassmorphism !)</em>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </details>
+
+        <!-- SLIDE 3: Grilles Bento -->
+        <details class="trend-card">
+            <summary>3. Grilles Bento (Bento Grids)</summary>
+            <div class="content-wrapper">
+                <div class="content">
+                    <div class="text-content">
+                        <h2>La modularité</h2>
+                        <p>Populaireisé par Apple (iOS widgets), ce style organise le contenu en boîtes rectangulaires de tailles variées.</p>
+                        <br>
+                        <ul>
+                            <li><strong>Structure claire :</strong> Permet de présenter beaucoup d'informations (images, textes, graphiques) de manière organisée.</li>
+                            <li><strong>Responsive :</strong> S'adapte parfaitement aux mobiles et aux grands écrans.</li>
+                            <li><strong>Esthétique :</strong> Donne un aspect soigné, "propre" et technique aux dashboards et portfolios.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </details>
+
+        <!-- SLIDE 4: Micro-interactions -->
+        <details class="trend-card">
+            <summary>4. Micro-interactions</summary>
+            <div class="content-wrapper">
+                <div class="content">
+                    <div class="text-content">
+                        <h2> Le site qui "vit"</h2>
+                        <p>L'interface n'est plus statique. Elle réagit à chaque geste de l'utilisateur.</p>
+                        <br>
+                        <ul>
+                            <li><strong>Feedback Immédiat :</strong> Un bouton qui "écrase" légèrement au clic, un curseur qui change de couleur.</li>
+                            <li><strong>Guidage :</strong> Une animation qui montre où regarder ou où scroller.</li>
+                            <li><strong>Joystick :</strong> Sur mobile, les gestes (swipe, pull-to-refresh) sont accompagnés d'animations fluides.</li>
+                        </ul>
+                        <p style="font-size: 0.9em; color: #ddd; margin-top:10px;">(Essayez de passer votre souris sur les cartes ci-dessus pour voir une micro-interaction simple).</p>
+                    </div>
+                </div>
+            </div>
+        </details>
+
+        <!-- SLIDE 5: Typographie & Émoticônes -->
+        <details class="trend-card">
+            <summary>5. Typographie Géante & 3D</summary>
+            <div class="content-wrapper">
+                <div class="content">
+                    <div class="text-content">
+                        <h2>L'impact visuel</h2>
+                        <ul>
+                            <li><strong>Typographie Massive :</strong> Des titres qui prennent 50% de l'écran pour capter l'immédiateté. Les polices "Serif" (avec empattements) reviennent en force pour le côté éditorial.</li>
+                            <li><strong>Éléments 3D :</strong> Avec des outils comme Spline ou Three.js, intégrer des objets 3D interactifs directement dans le web devient accessible et tendance.</li>
+                            <li><strong>Émojis comme icônes :</strong> Remplacement des icônes plates par de gros emojis colorés et expressifs.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </details>
+
+        <!-- SLIDE 6: Conclusion -->
+        <details class="trend-card">
+            <summary>6. Conclusion</summary>
+            <div class="content-wrapper">
+                <div class="content">
+                    <div class="text-content">
+                        <h2>L'avenir</h2>
+                        <p>Les tendances évoluent vite, mais le but reste le même : <strong>l'expérience utilisateur (UX)</strong>.</p>
+                        <br>
+                        <p>Que ce soit le verre, le noir ou le 3D, tout sert à rendre la navigation plus intuitive, plus rapide et plus agréable. La prochaine grande frontière ? <strong>L'UI générée par l'IA.</strong></p>
+                    </div>
+                </div>
+            </div>
+        </details>
+
+    </main>
+
+</body>
+</html>
