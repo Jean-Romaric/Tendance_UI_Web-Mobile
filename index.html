@@ -7,7 +7,6 @@
     <style>
         /* --- 1. Design Global : Glassmorphism & Dark Mode --- */
         
-        /* Un fond dégradé animé moderne */
         body {
             font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
@@ -47,8 +46,8 @@
         details > summary::-webkit-details-marker { display: none; }
 
         .trend-card {
-            background: rgba(255, 255, 255, 0.1); /* Transparence */
-            backdrop-filter: blur(12px); /* Flou derrière l'élément (Effet Glassmorphism) */
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(12px);
             -webkit-backdrop-filter: blur(12px);
             border: 1px solid rgba(255, 255, 255, 0.2);
             border-radius: 20px;
@@ -58,7 +57,6 @@
             transition: transform 0.3s ease;
         }
 
-        /* Petit effet de survol sur la carte */
         .trend-card:hover {
             transform: translateY(-5px);
             border-color: rgba(255, 255, 255, 0.4);
@@ -85,7 +83,7 @@
             content: '+';
             font-size: 2rem;
             opacity: 0.8;
-            transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); /* Rebond */
+            transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
         }
 
         details[open] summary::after {
@@ -119,7 +117,7 @@
         }
 
         h2 {
-            color: #a5f3fc; /* Cyan clair */
+            color: #a5f3fc;
             margin-top: 0;
             font-size: 1.5rem;
             display: flex;
@@ -141,13 +139,12 @@
         /* Petite puce personnalisée */
         li::before {
             content: '•';
-            color: #f472b6; /* Rose */
+            color: #f472b6;
             position: absolute;
             left: 0;
             font-weight: bold;
         }
 
-        /* Tags pour les mots-clés */
         .tag {
             display: inline-block;
             background: rgba(0,0,0,0.3);
@@ -157,6 +154,17 @@
             margin-right: 5px;
             font-family: monospace;
             border: 1px solid rgba(255,255,255,0.2);
+        }
+
+        /* Style spécifique pour la section "Importance" */
+        .importance-box {
+            margin-top: 20px;
+            padding-top: 15px;
+            border-top: 1px solid rgba(255,255,255,0.2);
+        }
+        
+        .importance-box strong {
+            color: #fcd34d; /* Jaune */
         }
 
         /* Responsive */
@@ -169,23 +177,50 @@
 <body>
 
     <header>
-        <h1>UI</h1>
-        <p class="subtitle">Les tendances du design Web & Mobile</p>
+        <h1>UI Trends 2024</h1>
+        <p class="subtitle">Les fondamentaux et tendances du design</p>
     </header>
 
     <main>
 
-        <!-- SLIDE 1: Dark Mode -->
+        <!-- SLIDE 0: DÉFINITION (Ajouté) -->
         <details class="trend-card" open>
+            <summary>0. C'est quoi l'UI Design ?</summary>
+            <div class="content-wrapper">
+                <div class="content">
+                    <div class="text-content">
+                        <h2>🎨 Les bases visuelles</h2>
+                        <p>Le designer UI (User Interface) s'occupe de <strong>tous les éléments graphiques</strong> que l'utilisateur voit.</p>
+                        
+                        <ul>
+                            <li><strong>Les Couleurs :</strong> Quelle palette de couleurs donner à la marque ? (Par exemple : Le bleu pour la confiance, le rouge pour l'urgence).</li>
+                            <li><strong>La Typographie :</strong> Quelle police d'écriture utiliser ? (Est-ce lisible ? Est-ce moderne ?).</li>
+                            <li><strong>Les Boutons :</strong> Quelle forme ? Où les placer ? Quelle couleur quand on passe la souris dessus ?</li>
+                            <li><strong>Les Icônes :</strong> Le style des petits symboles (maison, loupe, panier).</li>
+                            <li><strong>L'Espacement :</strong> L'espace entre les textes et les images pour que ce ne soit pas trop encombré.</li>
+                            <li><strong>Les Images :</strong> Le choix des photos et des illustrations.</li>
+                        </ul>
+
+                        <div class="importance-box">
+                            <strong>⚡ Pourquoi c'est important ?</strong>
+                            <p>Une bonne UI donne une <strong>première impression positive</strong>. Si un site est moche ou mal organisé visuellement, l'utilisateur va partir avant même de tester si les fonctionnalités sont bonnes. L'UI inspire la confiance.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </details>
+
+        <!-- SLIDE 1: Dark Mode -->
+        <details class="trend-card">
             <summary>1. Le Dark Mode Évolué</summary>
             <div class="content-wrapper">
                 <div class="content">
                     <div class="text-content">
-                        <h2> L'obscurité élégante</h2>
+                        <h2>🌙 L'obscurité élégante</h2>
                         <p>Ce n'est plus juste une option, c'est la norme. Mais le dark mode moderne a évolué.</p>
                         <br>
                         <ul>
-                            <li><strong>OLED Blacks :</strong> Utilisation de noir pur (#000000) sur les écrans OLED pour économiser la batterie et obtenir un contraste infini.</li>
+                            <li><strong>OLED Blacks :</strong> Utilisation de noir pur (#000000) sur les écrans OLED pour économiser la batterie.</li>
                             <li><strong>Contraste Élevé :</strong> On abandonne le gris foncé pour des blancs éclatants sur fond noir très sombre.</li>
                             <li><strong>Atmosphère :</strong> Crée une sensation de premium et de luxe (comme Netflix ou Spotify).</li>
                         </ul>
@@ -200,18 +235,15 @@
             <div class="content-wrapper">
                 <div class="content">
                     <div class="text-content">
-                        <h2>L'effet Verre</h2>
+                        <h2>🧊 L'effet Verre</h2>
                         <p>Inspiré par iOS et Windows 11, ce style utilise la transparence et le flou.</p>
                         <br>
                         <p><span class="tag">CSS backdrop-filter</span> <span class="tag">Blur</span> <span class="tag">Couches</span></p>
                         <ul>
-                            <li><strong>Flou d'arrière-plan :</strong> Le contenu derrière l'élément est flouté, créant une sensation de profondeur et de superposition.</li>
+                            <li><strong>Flou d'arrière-plan :</strong> Le contenu derrière l'élément est flouté, créant une sensation de profondeur.</li>
                             <li><strong>Border Subtile :</strong> Des bordures blanches fines et translucides pour simuler le reflet sur le verre.</li>
-                            <li><strong>Usage :</strong> Parfait pour les menus flottants, les cartes de profil ou les modales.</li>
+                            <li><strong>Usage :</strong> Parfait pour les menus flottants ou les cartes.</li>
                         </ul>
-                        <div style="background: rgba(255,255,255,0.1); padding: 10px; border-radius: 10px; margin-top: 10px; border: 1px solid rgba(255,255,255,0.2);">
-                            <em>(Note : Le design de cette présentation utilise justement le Glassmorphism !)</em>
-                        </div>
                     </div>
                 </div>
             </div>
@@ -219,17 +251,17 @@
 
         <!-- SLIDE 3: Grilles Bento -->
         <details class="trend-card">
-            <summary>3. Grilles Bento (Bento Grids)</summary>
+            <summary>3. Grilles Bento</summary>
             <div class="content-wrapper">
                 <div class="content">
                     <div class="text-content">
-                        <h2>La modularité</h2>
-                        <p>Populaireisé par Apple (iOS widgets), ce style organise le contenu en boîtes rectangulaires de tailles variées.</p>
+                        <h2>📦 La modularité</h2>
+                        <p>Populaireisé par Apple (iOS widgets), ce style organise le contenu en boîtes rectangulaires.</p>
                         <br>
                         <ul>
-                            <li><strong>Structure claire :</strong> Permet de présenter beaucoup d'informations (images, textes, graphiques) de manière organisée.</li>
+                            <li><strong>Structure claire :</strong> Permet de présenter beaucoup d'informations de manière organisée.</li>
                             <li><strong>Responsive :</strong> S'adapte parfaitement aux mobiles et aux grands écrans.</li>
-                            <li><strong>Esthétique :</strong> Donne un aspect soigné, "propre" et technique aux dashboards et portfolios.</li>
+                            <li><strong>Esthétique :</strong> Donne un aspect soigné et technique aux dashboards.</li>
                         </ul>
                     </div>
                 </div>
@@ -242,31 +274,29 @@
             <div class="content-wrapper">
                 <div class="content">
                     <div class="text-content">
-                        <h2> Le site qui "vit"</h2>
+                        <h2>✨ Le site qui "vit"</h2>
                         <p>L'interface n'est plus statique. Elle réagit à chaque geste de l'utilisateur.</p>
                         <br>
                         <ul>
-                            <li><strong>Feedback Immédiat :</strong> Un bouton qui "écrase" légèrement au clic, un curseur qui change de couleur.</li>
-                            <li><strong>Guidage :</strong> Une animation qui montre où regarder ou où scroller.</li>
-                            <li><strong>Joystick :</strong> Sur mobile, les gestes (swipe, pull-to-refresh) sont accompagnés d'animations fluides.</li>
+                            <li><strong>Feedback Immédiat :</strong> Un bouton qui "écrase" au clic.</li>
+                            <li><strong>Guidage :</strong> Une animation qui montre où scroller.</li>
+                            <li><strong>Joystick :</strong> Sur mobile, les gestes (swipe) sont accompagnés d'animations fluides.</li>
                         </ul>
-                        <p style="font-size: 0.9em; color: #ddd; margin-top:10px;">(Essayez de passer votre souris sur les cartes ci-dessus pour voir une micro-interaction simple).</p>
                     </div>
                 </div>
             </div>
         </details>
 
-        <!-- SLIDE 5: Typographie & Émoticônes -->
+        <!-- SLIDE 5: Typographie & 3D -->
         <details class="trend-card">
             <summary>5. Typographie Géante & 3D</summary>
             <div class="content-wrapper">
                 <div class="content">
                     <div class="text-content">
-                        <h2>L'impact visuel</h2>
+                        <h2>🔤 L'impact visuel</h2>
                         <ul>
-                            <li><strong>Typographie Massive :</strong> Des titres qui prennent 50% de l'écran pour capter l'immédiateté. Les polices "Serif" (avec empattements) reviennent en force pour le côté éditorial.</li>
-                            <li><strong>Éléments 3D :</strong> Avec des outils comme Spline ou Three.js, intégrer des objets 3D interactifs directement dans le web devient accessible et tendance.</li>
-                            <li><strong>Émojis comme icônes :</strong> Remplacement des icônes plates par de gros emojis colorés et expressifs.</li>
+                            <li><strong>Typographie Massive :</strong> Des titres qui prennent 50% de l'écran. Le retour des polices "Serif" pour le côté éditorial.</li>
+                            <li><strong>Éléments 3D :</strong> Intégration d'objets 3D interactifs directement dans le web.</li>
                         </ul>
                     </div>
                 </div>
@@ -279,10 +309,10 @@
             <div class="content-wrapper">
                 <div class="content">
                     <div class="text-content">
-                        <h2>L'avenir</h2>
+                        <h2>🚀 L'avenir</h2>
                         <p>Les tendances évoluent vite, mais le but reste le même : <strong>l'expérience utilisateur (UX)</strong>.</p>
                         <br>
-                        <p>Que ce soit le verre, le noir ou le 3D, tout sert à rendre la navigation plus intuitive, plus rapide et plus agréable. La prochaine grande frontière ? <strong>L'UI générée par l'IA.</strong></p>
+                        <p>Que ce soit le verre, le noir ou le 3D, tout sert à rendre la navigation plus intuitive et plus agréable.</p>
                     </div>
                 </div>
             </div>
