@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tendances UI Web & Mobile</title>
     <style>
-        /* --- 1. Design Global : Glassmorphism & Dark Mode --- */
         
         body {
             font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
@@ -40,7 +39,6 @@
             padding: 0 1rem 3rem 1rem;
         }
 
-        /* --- 2. Style de l'Accordéon (Effet Verre) --- */
         
         details > summary { list-style: none; }
         details > summary::-webkit-details-marker { display: none; }
@@ -62,7 +60,6 @@
             border-color: rgba(255, 255, 255, 0.4);
         }
 
-        /* --- GRAND TITRE --- */
         summary {
             font-size: 1.8rem;
             padding: 1.5rem;
@@ -78,7 +75,6 @@
             background: rgba(255, 255, 255, 0.1);
         }
 
-        /* Icône animée (+) */
         summary::after {
             content: '+';
             font-size: 2rem;
@@ -94,7 +90,6 @@
             border-bottom: 1px solid rgba(255, 255, 255, 0.1);
         }
 
-        /* --- Animation Déroulement --- */
         .content-wrapper {
             display: grid;
             grid-template-rows: 0fr;
@@ -109,7 +104,6 @@
             overflow: hidden;
         }
 
-        /* --- Contenu Textuel --- */
         .text-content {
             padding: 0 2rem 2rem 2rem;
             font-size: 1.1rem;
@@ -136,7 +130,6 @@
             position: relative;
         }
 
-        /* Petite puce personnalisée */
         li::before {
             content: '•';
             color: #f472b6;
@@ -156,7 +149,6 @@
             border: 1px solid rgba(255,255,255,0.2);
         }
 
-        /* Style spécifique pour la section "Importance" */
         .importance-box {
             margin-top: 20px;
             padding-top: 15px;
@@ -164,10 +156,9 @@
         }
         
         .importance-box strong {
-            color: #fcd34d; /* Jaune */
+            color: #fcd34d;
         }
 
-        /* Responsive */
         @media (max-width: 600px) {
             h1 { font-size: 2rem; }
             summary { font-size: 1.4rem; }
@@ -183,13 +174,12 @@
 
     <main>
 
-        <!-- SLIDE 0: DÉFINITION (Ajouté) -->
         <details class="trend-card" open>
             <summary>0. C'est quoi l'UI Design ?</summary>
             <div class="content-wrapper">
                 <div class="content">
                     <div class="text-content">
-                        <h2>🎨 Les bases visuelles</h2>
+                        <h2>Les bases visuelles</h2>
                         <p>Le designer UI (User Interface) s'occupe de <strong>tous les éléments graphiques</strong> que l'utilisateur voit.</p>
                         
                         <ul>
@@ -202,7 +192,7 @@
                         </ul>
 
                         <div class="importance-box">
-                            <strong>⚡ Pourquoi c'est important ?</strong>
+                            <strong>Pourquoi c'est important ?</strong>
                             <p>Une bonne UI donne une <strong>première impression positive</strong>. Si un site est moche ou mal organisé visuellement, l'utilisateur va partir avant même de tester si les fonctionnalités sont bonnes. L'UI inspire la confiance.</p>
                         </div>
                     </div>
@@ -216,7 +206,7 @@
             <div class="content-wrapper">
                 <div class="content">
                     <div class="text-content">
-                        <h2>🌙 L'obscurité élégante</h2>
+                        <h2>L'obscurité élégante</h2>
                         <p>Ce n'est plus juste une option, c'est la norme. Mais le dark mode moderne a évolué.</p>
                         <br>
                         <ul>
@@ -235,7 +225,7 @@
             <div class="content-wrapper">
                 <div class="content">
                     <div class="text-content">
-                        <h2>🧊 L'effet Verre</h2>
+                        <h2>L'effet Verre</h2>
                         <p>Inspiré par iOS et Windows 11, ce style utilise la transparence et le flou.</p>
                         <br>
                         <p><span class="tag">CSS backdrop-filter</span> <span class="tag">Blur</span> <span class="tag">Couches</span></p>
@@ -255,7 +245,7 @@
             <div class="content-wrapper">
                 <div class="content">
                     <div class="text-content">
-                        <h2>📦 La modularité</h2>
+                        <h2>La modularité</h2>
                         <p>Populaireisé par Apple (iOS widgets), ce style organise le contenu en boîtes rectangulaires.</p>
                         <br>
                         <ul>
@@ -274,7 +264,7 @@
             <div class="content-wrapper">
                 <div class="content">
                     <div class="text-content">
-                        <h2>✨ Le site qui "vit"</h2>
+                        <h2>Le site qui "vit"</h2>
                         <p>L'interface n'est plus statique. Elle réagit à chaque geste de l'utilisateur.</p>
                         <br>
                         <ul>
@@ -293,7 +283,7 @@
             <div class="content-wrapper">
                 <div class="content">
                     <div class="text-content">
-                        <h2>🔤 L'impact visuel</h2>
+                        <h2>L'impact visuel</h2>
                         <ul>
                             <li><strong>Typographie Massive :</strong> Des titres qui prennent 50% de l'écran. Le retour des polices "Serif" pour le côté éditorial.</li>
                             <li><strong>Éléments 3D :</strong> Intégration d'objets 3D interactifs directement dans le web.</li>
@@ -309,7 +299,7 @@
             <div class="content-wrapper">
                 <div class="content">
                     <div class="text-content">
-                        <h2>🚀 L'avenir</h2>
+                        <h2>L'avenir</h2>
                         <p>Les tendances évoluent vite, mais le but reste le même : <strong>l'expérience utilisateur (UX)</strong>.</p>
                         <br>
                         <p>Que ce soit le verre, le noir ou le 3D, tout sert à rendre la navigation plus intuitive et plus agréable.</p>
